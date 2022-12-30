@@ -36,6 +36,12 @@
            
             let url = 'https://websitetest3.netlify.app/';
             let newWindow = window.open(url,"", "width=500, height=800");
+            //close this new window after 5 secondes
+            setTimeout(() => {
+                newWindow.close();
+            }, 5000);
+
+              
         }
     </script>
 </body>
