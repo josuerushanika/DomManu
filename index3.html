@@ -29,9 +29,9 @@
     <h1>Test yourself</h1>
     <h2>getElementsByClassName()</h2>
     <div>
-        <button onclick="green()" class="green">click to change this to green</button>
-        <button onclick="blue()" class="blue">click to change this to blue</button>
-        <button onclick="red()" class="red">click to change this to red</button>
+        <button onclick="green()" class="green undo">click to change this to green</button>
+        <button onclick="blue()" class="blue undo">click to change this to blue</button>
+        <button onclick="red()" class="red undo">click to change this to red</button>
         <button onclick="undo()">Undo</button>
     </div>
 
@@ -52,8 +52,10 @@
         }
 
         function undo() {
-         document.getElementsByClassName('green')[0]
-        .style.backgroundColor = 'green';  
+          let buttons = document.getElementsByClassName('undo');
+        for(let i=0; i< buttons.length; i++) {
+            buttons[i].style.backgroundColor = 'black';
+        }
         }
     </script>
 </body>
